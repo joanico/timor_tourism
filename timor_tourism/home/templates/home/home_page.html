@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 
 {% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
-
 {% block content %}
-    {{ page.body|richtext }}
-    <div class="rich-text">
-    <p>
-        <b>Welcome</b> to our new site!
-    </p>
+    {% image page.image original as page_image %}
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ page_image.url }}');background-size: cover;height: 500px;">
     </div>
+
+    {% include_block page.body %}
 {% endblock %}
