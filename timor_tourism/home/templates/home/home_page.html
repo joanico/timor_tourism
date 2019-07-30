@@ -1,21 +1,13 @@
 {% extends "base.html" %}
-{% load static %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
-
-{% block extra_css %}
-
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
-{% endblock extra_css %}
-
 {% block content %}
+    {% image page.image original as page_image %}
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ page_image.url }}');background-size: cover;height: 500px;">
+    </div>
 
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-{% include 'home/welcome_page.html' %}
-
-{% endblock content %}
+    {% include_block page.body %}
+{% endblock %}
