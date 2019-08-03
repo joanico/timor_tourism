@@ -27,6 +27,10 @@
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
+
+	{# Inklui header iha ne'e #}	
+	{% include 'includes/header.html' %}
+
         {% wagtailuserbar %}
 
         {% block content %}{% endblock %}
