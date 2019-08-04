@@ -19,6 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/timor_tourism.css' %}">
 
         {% block extra_css %}
@@ -30,7 +31,6 @@
 
 	{# Inklui header iha ne'e #}	
 	{% include 'includes/header.html' %}
-
         {% wagtailuserbar %}
 
         {% block content %}{% endblock %}
