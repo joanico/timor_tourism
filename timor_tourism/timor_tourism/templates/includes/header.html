@@ -15,6 +15,8 @@
         {% for item in navigation.menu_items.all %}
         <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank"{% endif %}>{{ item.title }}</a>
         {% endfor %}
+        <a href="http://www.facebook.com"><img src='media/images/facebook.png' class="icon-sosialmedia"/></a>
+        <a href="http://www.twitter.com"><img src='media/images/twitter.png' class="icon-sosialmedia"/></a>
       </li>
     </ul>
   </div>

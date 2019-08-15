@@ -13,7 +13,7 @@
 }
 
 .nav-item{
-    margin-left: 600px;
+    margin-left: 550px;
     font-size: 17px;
 }
 
@@ -22,4 +22,11 @@ a {
     text-decoration: none;
     background-color: transparent;
     margin-left: 14px;
+}
+
+img.icon-sosialmedia {
+    vertical-align: middle;
+    border-style: none;
+    width: 30px;
+    height: 30px;
 }
