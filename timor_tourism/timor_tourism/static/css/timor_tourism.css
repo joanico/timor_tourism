@@ -1,0 +1,32 @@
+/* HEADER & MEMU BAR */
+
+.navbar {
+    background-color: #fff !important;
+    border: 1px solid rgb(251, 247, 247);
+    padding: 25px;
+}
+
+.navbar-light .navbar-brand {
+    color: #14c523;
+    font-family: fantasy;
+    font-size: 32px;
+}
+
+.nav-item{
+    margin-left: 550px;
+    font-size: 17px;
+}
+
+a {
+    color: #4582EC;
+    text-decoration: none;
+    background-color: transparent;
+    margin-left: 14px;
+}
+
+img.icon-sosialmedia {
+    vertical-align: middle;
+    border-style: none;
+    width: 30px;
+    height: 30px;
+}
