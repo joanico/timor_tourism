@@ -1,8 +1,7 @@
 /* HEADER & MEMU BAR */
 
 .navbar {
-    background-color: #fff !important;
-    border: 1px solid rgb(251, 247, 247);
+    background-color: #007b5e;
     padding: 25px;
 }
 
@@ -29,4 +28,16 @@ img.icon-sosialmedia {
     border-style: none;
     width: 30px;
     height: 30px;
+}
+
+/* FOOTER */
+
+.copyright {
+    padding-left: 400px;
+    font-family: auto;
+    color: white;
+}
+
+nav.navbar.footer {
+    padding: 70px;
 }
