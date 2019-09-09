@@ -1,0 +1,20 @@
+{% load menus_tags %}
+
+{% get_menu "main" as navigation %}
+
+<nav class="navbar footer">
+    <div class="row">
+        <div class="col-4">
+            {% for item in navigation.menu_items.all %}
+                <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank"{% endif %}>{{item.title}}</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="copyright">
+            copyright@mtci.tl {% now 'Y' %}
+            <a href="http://www.facebook.com"><img src='media/images/facebook1.png' class="icon-sosialmedia"/></a>
+            <a href="http://www.twitter.com"><img src='media/images/twitter1.png' class="icon-sosialmedia"/></a>
+        </div>
+    </div>
+</nav>
