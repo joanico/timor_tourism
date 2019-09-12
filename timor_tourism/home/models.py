@@ -8,7 +8,7 @@ from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
 #import class sira husi block.py nian iha ne.
-from .blocks import TourismRichBlock 
+from .blocks import TourismRichBlock, BlogRichBlock, BlogLinksBlock 
 
 """ Import models ba Menu"""
 from django_extensions.db.fields import AutoSlugField
@@ -35,10 +35,30 @@ class HomePage(Page):
     # Field ba body ka text iha pajina dahuluk nian
     body = StreamField(
             [
-                ('paragraph', TourismRichBlock()) # paragraph refere kria pajina dahuluk nian no TourismRichBlock refere ba class husi block.py ba pajina dahuluk nian.
+                ('paragraph', TourismRichBlock()), # paragraph refere kria pajina dahuluk nian no TourismRichBlock refere ba class husi block.py ba pajina dahuluk nian.
+                ('links', BlogLinksBlock())
             ]
         )
     # contenet_panel refere ba field nebe kria ona iha leten.
+    content_panels = Page.content_panels + [
+        ImageChooserPanel('image'),
+        StreamFieldPanel('body'),
+    ]
+
+class BlogContentPage(Page):
+    image = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+')
+
+    body = StreamField(
+            [
+                ('Blog', BlogRichBlock()),
+            ]
+        )
+
     content_panels = Page.content_panels + [
         ImageChooserPanel('image'),
         StreamFieldPanel('body'),

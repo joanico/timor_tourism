@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+    {% image page.image fill-300x200 class="card-img-top" %}
+
+    {{ self.body|safe }}
+
+{% endblock content %}

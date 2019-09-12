@@ -30,6 +30,13 @@ img.icon-sosialmedia {
     height: 30px;
 }
 
+/* Content of rict text */
+
+.block-paragraph {
+    margin: 150px;
+    padding: 6px;
+}
+
 /* FOOTER */
 
 .copyright {
